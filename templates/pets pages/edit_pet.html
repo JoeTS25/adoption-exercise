@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>{{ pet.name }}</h1>
+
+{% if pet.photo_url %}
+<img src="{{ pet.photo_url }}" alt="dog photo">
+{% endif %}
+
+<h2>Update Dog Info</h2>
+
+<form method="POST">
+    {% include "_form.html" %}
+    <button type="submit">Edit</button>
+</form>
